@@ -34,8 +34,10 @@ f.regional.fig(biomass_17, startyr = 1993, endyr = 2017)
 f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, closures = fishery.status)
 
 ### area figures  ----------------
-## Pybus
+## Pybus ---------------
 f.regional.table(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
+f.regional.thresholds(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
 
 f.regional.fig(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
+
 
