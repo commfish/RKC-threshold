@@ -42,9 +42,8 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1") +
       geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
-      ggsave("results/regional_biomass.png", plot = last_plot() , device="png",
+      ggsave(paste0("results/regional_biomass", endyr, ".png"), plot = last_plot(), device="png",
              dpi=300, height=5.0, width=7.55, units="in")
-    
   } else if(missing(region) && !missing(closures)){ 
     x %>% 
       left_join(closures) -> x
