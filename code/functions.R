@@ -40,15 +40,16 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
       theme(legend.position = c(0.8,0.7)) +
-      geom_hline(yintercept = y1, color = "grey1") +
-      geom_hline(yintercept = y2, color = "grey1", lty = 4) 
+      geom_hline(yintercept = out$legal, color = "grey1") +
+      geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
       ggsave("results/regional_biomass.png", plot = last_plot() , device="png",
              dpi=300, height=5.0, width=7.55, units="in")
     
   } else if(missing(region) && !missing(closures)){ 
     
     x %>%
-      filter(Location == y) %>%
+      group_by(Year) %>% 
+      summarise(legal = sum(legal), mature = sum(mature)) %>% 
       gather(type, pounds, legal:mature, factor_key = TRUE) %>%
       ggplot(aes(Year, pounds, group = type)) +
       geom_point(aes(color = fishery.status, shape = type), size =3) +
@@ -61,8 +62,8 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =2)) +
       theme(legend.position = c(0.8,0.7)) +
-      geom_hline(yintercept = y1, color = "grey1") +
-      geom_hline(yintercept = y2, color = "grey1", lty = 4) %>%
+      geom_hline(yintercept = out$legal, color = "grey1") +
+      geom_hline(yintercept = out$mature, color = "grey1", lty = 4) %>%
       ggsave("results/regional_open_closed.png", device="png",
              dpi=300, height=5.0, width=7.55, units="in")
   } else{
@@ -82,8 +83,8 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =2)) +
       theme(legend.position = c(0.8,0.7)) +
-      geom_hline(yintercept = y1, color = "grey1") +
-      geom_hline(yintercept = y2, color = "grey1", lty = 4) %>%
+      geom_hline(yintercept = out$legal, color = "grey1") +
+      geom_hline(yintercept = out$mature, color = "grey1", lty = 4) %>%
       ggsave(paste0("results/", y, ".png"), device="png",
              dpi=300, height=5.0, width=7.55, units="in")
   }
