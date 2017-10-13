@@ -116,4 +116,26 @@ f.regional.table <- function(x, region=NULL, startyr = NULL, endyr = NULL){
   }
 }
 
-
+f.regional.thresholds <- function(x, region=NULL, startyr = NULL, endyr = NULL){
+  if(is.null(region)){
+  x %>% 
+    group_by(Year) %>% 
+    summarise(legal = sum(legal), mature = sum(mature)) %>% 
+    filter(Year >= startyr & Year <= endyr) %>% 
+    summarise(legal = mean(legal), mature = mean(mature)) %>% 
+    mutate(p50mat = 0.5 * mature, 
+           p60mat = 0.6 * mature, 
+           p70mat = 0.7 * mature, 
+           p80mat = 0.8 * mature )
+  } else {
+    y = region
+    x %>% 
+      filter(Location == y) %>% 
+      filter(Year >= startyr & Year <= endyr) %>% 
+      summarise(legal = mean(legal), mature = mean(mature))%>% 
+      mutate(p50mat = 0.5 * mature, 
+             p60mat = 0.6 * mature, 
+             p70mat = 0.7 * mature, 
+             p80mat = 0.8 * mature )
+  }
+}
