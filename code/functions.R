@@ -82,3 +82,22 @@ f.regional.fig <- function(x, region=NULL, y1, y2, closures=NULL){
              dpi=300, height=5.0, width=7.55, units="in")
   }
 }
+
+
+f.regional.table <- function(x, startyr = NULL, endyr = NULL, region=NULL){
+  if(is.null(region)){
+    x %>% 
+      group_by(Year) %>% 
+      summarise(legal = sum(legal), mature = sum(mature)) %>% 
+      filter(Year >= startyr & Year <= endyr) %>%
+      summarise(legal = mean(legal), mature = mean(mature))
+  } else {
+    y = deparse(substitute(x))
+    x %>% 
+      filter(Location == y) %>% 
+      filter(Year >= startyr & Year <= endyr) %>% 
+      summarise(legal = mean(legal), mature = mean(mature))
+  }
+}
+
+
