@@ -17,7 +17,18 @@ fishery.status <- read_excel(path = './data/fishery.status.xlsx')
 biomass_17 %>% 
   mutate(Location = as.factor(Location)) -> biomass_17
 
-### regional with LT baseline 93-07 
+### regional with LT baseline 93-07 ---------------
 f.regional.table(biomass_17, startyr = 1993, endyr = 2007)
 
 f.regional.fig(biomass_17, startyr = 1993, endyr = 2007)
+
+# regional, baseline 93-07, closures ------------
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, closures = fishery.status)
+
+### regional with average baseline from 93 to present ---------
+f.regional.table(biomass_17, startyr = 1993, endyr = 2017)
+
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2017)
+
+# regional, baseline 93- present, closures ------------
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, closures = fishery.status)
