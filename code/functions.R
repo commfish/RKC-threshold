@@ -19,7 +19,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures = NULL){
   # y2 = yintercept 2
   # closures = regional data with closures / openings (set to 1 if desired)
   
-  if(missing(region)){
+  if(missing(region) && missing(closures)){
     x %>% 
       group_by(Year) %>% 
       summarise(legal = sum(legal), mature = sum(mature)) %>% 
@@ -55,18 +55,18 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures = NULL){
     
     x %>%
       group_by(Year) %>% 
-      summarise(legal = sum(legal), mature = sum(mature)) %>% 
+      summarise(legal = sum(legal), mature = sum(mature), fishery.status = unique(fishery.status)) %>% 
       gather(type, pounds, legal:mature, factor_key = TRUE) %>%
       ggplot(aes(Year, pounds, group = type)) +
       geom_point(aes(color = fishery.status, shape = type), size =3) +
       geom_line(aes(color = type, group = type)) +
       scale_colour_manual(name = "", 
-                          values = c("grey1", "gray75", "grey1", "grey1", "red")) +
+                          values = c("grey1", "gray55", "grey1", "red")) +
       scale_shape_manual(name = "", values = c(16, 1, 20)) +
       ylim(0,1500000) +ggtitle("Survey areas 2017 Model") + 
       ylab("Biomass (lbs)")+ xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
-      scale_x_continuous(breaks = seq(1979, 2017, by =2)) +
+      scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1") +
       geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
