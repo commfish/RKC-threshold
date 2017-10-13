@@ -99,6 +99,69 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures = NULL){
   }
 }
 
+f.threshold.fig <- function(x, region=NULL, startyr, endyr, percent){
+  # x = data
+  # region = the region of interest
+  # startyr = starting year to calculate long term average 
+  # endyr = end year to calculate long term average
+  # closures = file with open or closed and year 
+  
+  if(missing(region)){
+    x %>% 
+      group_by(Year) %>% 
+      summarise(legal = sum(legal), mature = sum(mature)) %>% 
+      filter(Year >= startyr & Year <= endyr) %>%
+      summarise(legal = mean(legal), mature = mean(mature)) %>% 
+      mutate(p_mat = percent*mature) -> out
+    
+    x %>%
+      group_by(Year) %>% 
+      summarise(legal = sum(legal), mature = sum(mature)) %>% 
+      gather(type, pounds, legal:mature, factor_key = TRUE) %>%
+      ggplot(aes(Year, pounds, group = type)) +
+      geom_point(aes(color = type, shape = type), size =3) +
+      geom_line(aes(color = type, group = type)) +
+      scale_colour_manual(name = "", values = c("grey1", "grey1")) +
+      scale_shape_manual(name = "", values = c(16, 1)) +
+      ylim(0,1500000) + ggtitle(paste0("Survey areas 2017 model, ", percent, " threshold")) +
+      ylab("Biomass (lbs)") + xlab("") +
+      theme(plot.title = element_text(hjust =0.5)) +
+      scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
+      theme(legend.position = c(0.8,0.7)) +
+      #geom_hline(yintercept = out$legal, color = "grey1") +
+      geom_hline(yintercept = out$mature, color = "grey1") +
+      geom_hline(yintercept = out$p_mat, color = "red", lty = 4)
+    ggsave(paste0("results/regional_biomass_threshold", endyr, ".png"), plot = last_plot(), device="png",
+           dpi=300, height=5.0, width=7.55, units="in")
+  } else{
+    
+    y = region
+    x %>% 
+      filter(Location == y) %>% 
+      filter(Year >= startyr & Year <= endyr) %>% 
+      summarise(legal = mean(legal), mature = mean(mature)) %>% 
+      mutate(p_mat = percent*mature) -> out
+    x %>%
+      filter(Location == y) %>%
+      gather(type, pounds, legal:mature, factor_key = TRUE) %>%
+      ggplot(aes(Year, pounds, group = type)) +
+      geom_point(aes(color = type, shape = type), size =3) +
+      geom_line(aes(color = type, group = type)) +
+      scale_colour_manual(name = "", values = c("grey1", "grey1")) +
+      scale_shape_manual(name = "", values = c(16, 1)) +
+      ggtitle(paste0("2017 Model ", y, " survey area, ", percent, " threshold")) +
+      ylab("Biomass (lbs)") + xlab("") +
+      theme(plot.title = element_text(hjust =0.5)) +
+      scale_x_continuous(breaks = seq(1979, 2017, by = 5)) +
+      theme(legend.position = c(0.8,0.7)) +
+      #geom_hline(yintercept = out$legal, color = "grey1") +
+      geom_hline(yintercept = out$mature, color = "grey1") +
+      geom_hline(yintercept = out$p_mat, color = "red", lty = 4)
+    ggsave(paste0("results/threshold", y, endyr, percent, ".png"), plot = last_plot(), device="png",
+           dpi=300, height=5.0, width=7.55, units="in")
+  }
+}
+
 
 f.regional.table <- function(x, region=NULL, startyr = NULL, endyr = NULL){
   if(is.null(region)){
