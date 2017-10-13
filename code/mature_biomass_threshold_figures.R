@@ -22,24 +22,24 @@ f.regional.table(biomass_17, startyr = 1993, endyr = 2007)
 
 f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017)
 
-f.threshold.fig(biomass_17, startyr = 1993, endyr = 2007, percent = 0.50)
+f.threshold.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017, percent = 0.50)
 
 # regional, baseline 93-07, closures ------------
-f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, closures = fishery.status)
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017, closures = fishery.status)
 
 ### regional with average baseline from 93 to present ---------
 f.regional.table(biomass_17, startyr = 1993, endyr = 2017)
 
-f.regional.fig(biomass_17, startyr = 1993, endyr = 2017)
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, currentyr = 2017)
 
 # regional, baseline 93- present, closures ------------
-f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, closures = fishery.status)
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, currentyr = 2017, closures = fishery.status)
 
 ### area figures  ----------------
 ## Pybus ---------------
 f.regional.table(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
 f.regional.thresholds(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
 
-f.regional.fig(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
+f.regional.fig(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007, currentyr = 2017)
 
-f.threshold.fig(biomass_17, region = 'Pybus', 1993, 2007, 0.50)
+f.threshold.fig(biomass_17, region = 'Pybus', 1993, 2007, 2017, 0.50)
