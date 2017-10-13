@@ -15,6 +15,9 @@ windowsFonts(Times=windowsFont("TT Times New Roman"))
 theme_set(theme_bw(base_size=12,base_family='Times New Roman')+ 
             theme(panel.grid.major = element_blank(),
                   panel.grid.minor = element_blank()))
+
+source("code/functions.R")
+
 #Load data ----------------
 #biomass <- read.csv("./data/redcrab/biomass.csv") no record of historic mature biomass point estimates
 # in each year so using 2017 model output
