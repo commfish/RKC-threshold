@@ -100,12 +100,13 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
   }
 }
 
-f.threshold.fig <- function(x, region=NULL, startyr, endyr, percent){
+f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
   # x = data
   # region = the region of interest
   # startyr = starting year to calculate long term average 
   # endyr = end year to calculate long term average
-  # closures = file with open or closed and year 
+  # currentyr = the current year used to generate the biomass estimates
+  # percent = the ratio (i.e. 0.50 used to create a threshold when applied to the mean)
   
   if(missing(region)){
     x %>% 
