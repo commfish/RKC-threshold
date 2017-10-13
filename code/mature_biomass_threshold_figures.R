@@ -16,3 +16,8 @@ fishery.status <- read_excel(path = './data/fishery.status.xlsx')
 # data format  -----------
 biomass_17 %>% 
   mutate(Location = as.factor(Location)) -> biomass_17
+
+### regional with LT baseline 93-07 
+f.regional.table(biomass_17, startyr = 1993, endyr = 2007)
+
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007)
