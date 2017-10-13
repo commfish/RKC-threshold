@@ -20,7 +20,9 @@ biomass_17 %>%
 ### regional with LT baseline 93-07 ---------------
 f.regional.table(biomass_17, startyr = 1993, endyr = 2007)
 
-f.regional.fig(biomass_17, startyr = 1993, endyr = 2007)
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017)
+
+f.threshold.fig(biomass_17, startyr = 1993, endyr = 2007, percent = 0.50)
 
 # regional, baseline 93-07, closures ------------
 f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, closures = fishery.status)
@@ -40,4 +42,4 @@ f.regional.thresholds(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007
 
 f.regional.fig(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
 
-
+f.threshold.fig(biomass_17, region = 'Pybus', 1993, 2007, 0.50)
