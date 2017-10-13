@@ -46,6 +46,13 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
              dpi=300, height=5.0, width=7.55, units="in")
     
   } else if(missing(region) && !missing(closures)){ 
+    x %>% 
+      left_join(closures) -> x
+    x %>% 
+      group_by(Year) %>% 
+      summarise(legal = sum(legal), mature = sum(mature)) %>% 
+      filter(Year >= startyr & Year <= endyr) %>%
+      summarise(legal = mean(legal), mature = mean(mature)) -> out
     
     x %>%
       group_by(Year) %>% 
@@ -63,8 +70,8 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       scale_x_continuous(breaks = seq(1979, 2017, by =2)) +
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1") +
-      geom_hline(yintercept = out$mature, color = "grey1", lty = 4) %>%
-      ggsave("results/regional_open_closed.png", device="png",
+      geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
+      ggsave("results/regional_open_closed.png", plot = last_plot() , device="png",
              dpi=300, height=5.0, width=7.55, units="in")
   } else{
     
