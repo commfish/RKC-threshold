@@ -125,7 +125,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
       geom_line(aes(color = type, group = type)) +
       scale_colour_manual(name = "", values = c("grey1", "grey1")) +
       scale_shape_manual(name = "", values = c(16, 1)) +
-      ylim(0,1500000) + ggtitle(paste0("Survey areas 2017 model, ", percent, " threshold")) +
+      ylim(0,1500000) + ggtitle(paste0("Survey areas ", currentyr ," model, ", percent, " threshold, ", startyr, "-", endyr, " average" )) +
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
@@ -151,7 +151,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
       geom_line(aes(color = type, group = type)) +
       scale_colour_manual(name = "", values = c("grey1", "grey1")) +
       scale_shape_manual(name = "", values = c(16, 1)) +
-      ggtitle(paste0("2017 Model ", y, " survey area, ", percent, " threshold")) +
+      ggtitle(paste0( currentyr, " Model ", y, " survey area, ", percent, " threshold, ", startyr, "-", endyr, " average" )) +
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by = 5)) +
