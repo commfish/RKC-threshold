@@ -76,7 +76,10 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
   } else{
     
     y = deparse(substitute(region))
-    
+    x %>% 
+      filter(Location == y) %>% 
+      filter(Year >= startyr & Year <= endyr) %>% 
+      summarise(legal = mean(legal), mature = mean(mature)) -> out
     x %>%
       filter(Location == y) %>%
       gather(type, pounds, legal:mature, factor_key = TRUE) %>%
@@ -92,7 +95,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1") +
       geom_hline(yintercept = out$mature, color = "grey1", lty = 4) %>%
-      ggsave(paste0("results/", y, ".png"), device="png",
+      ggsave(paste0("results/", y, ".png"), plot = last_plot(), device="png",
              dpi=300, height=5.0, width=7.55, units="in")
   }
 }
