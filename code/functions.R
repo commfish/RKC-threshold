@@ -87,7 +87,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures = NULL){
       geom_line(aes(color = type, group = type)) +
       scale_colour_manual(name = "", values = c("grey1", "grey1")) +
       scale_shape_manual(name = "", values = c(16, 1)) +
-      ggtitle("Survey areas 2017 Model") +
+      ggtitle(paste0("2017 Model ", y, " survey area")) +
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =2)) +
