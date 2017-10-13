@@ -12,7 +12,7 @@ theme_set(theme_bw(base_size=12,base_family='Times New Roman')+
                   panel.grid.minor = element_blank()))
 
 # functions ----
-f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
+f.regional.fig <- function(x, region=NULL, startyr, endyr, closures = NULL){
   # x = data
   # region = the region of interest
   # y1 = yintercept 1
@@ -70,7 +70,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, closures=NULL){
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1") +
       geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
-      ggsave("results/regional_open_closed.png", plot = last_plot() , device="png",
+      ggsave(paste0("results/regional_open_closed", endyr, ".png"), plot = last_plot(), device="png",
              dpi=300, height=5.0, width=7.55, units="in")
   } else{
     
