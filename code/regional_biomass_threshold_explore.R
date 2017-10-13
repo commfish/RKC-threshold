@@ -103,28 +103,7 @@ dev.off()
 
 
 ### Figures with function attempts -----
-f.regional.fig(biomass_17, region = NULL, startyr = 1993, endyr = 2007, closures =NULL)
-
-biomass_17 %>%
-  #filter(Location == y) %>%
-  group_by(Year) %>% 
-  summarise(legal = sum(legal), mature = sum(mature)) %>% 
-  gather(type, pounds, legal:mature, factor_key = TRUE) %>%
-  ggplot(aes(Year, pounds, group = type)) +
-  geom_point(aes(color = type, shape = type), size =3) +
-  geom_line(aes(color = type, group = type)) +
-  scale_colour_manual(name = "", values = c("grey1", "grey1")) +
-  scale_shape_manual(name = "", values = c(16, 1)) +
-  ylim(0,1500000) + ggtitle("Survey areas 2017 Model") +
-  ylab("Biomass (lbs)") + xlab("") +
-  theme(plot.title = element_text(hjust =0.5)) +
-  scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
-  theme(legend.position = c(0.8,0.7)) +
-  geom_hline(yintercept = out$legal, color = "grey1") +
-  geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
-  ggsave("results/regional_biomass.png", plot = last_plot() , device="png",
-         dpi=300, height=5.0, width=7.55, units="in")
-
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007)
 
 ### 2017 output long term baseline average -------------
 
