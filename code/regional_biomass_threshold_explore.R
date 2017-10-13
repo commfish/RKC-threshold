@@ -23,6 +23,11 @@ reg_biomass <- read_excel(path = "./data/regional_biomass.xlsx")
 biomass_17 <- read_excel(path = "./data/2017_biomass_model.xlsx", sheet = 1)
 harvest <- read_excel(path = "./data/harvest.xlsx", sheet = 1)
 
+# data format  -----------
+biomass_17 %>% 
+  mutate(Location = as.factor(Location)) -> biomass_17
+
+
 ### regional figure ------------
 # replication of Figure 2 from 2017 memo
 reg_biomass %>% select(Year, legal, mature) ->biomass1
@@ -84,7 +89,7 @@ fig1<- ggplot(biomass_17a_long, aes(Year, pounds, group = type))+
 
 f.regional.table(biomass_17, startyr = 1993, endyr = 2007) # produces LT baseline averages
 
-f.regional.table(biomass_17, region = Pybus, startyr = 1993, endyr = 2007) 
+f.regional.table(biomass_17, region = 'Pybus' , startyr = 1993, endyr = 2007) 
 
 
 #biomass_17a %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(reg_legal))
@@ -115,8 +120,8 @@ biomass_17 %>%
   scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
   theme(legend.position = c(0.8,0.7)) +
   geom_hline(yintercept = 646753.4, color = "grey1") +
-  geom_hline(yintercept = 907430.5, color = "grey1", lty = 4) %>%
-  ggsave("results/regional_biomass.png", device="png",
+  geom_hline(yintercept = 907430.5, color = "grey1", lty = 4) 
+  ggsave("results/regional_biomass.png", plot = last_plot() , device="png",
          dpi=300, height=5.0, width=7.55, units="in")
 
 
