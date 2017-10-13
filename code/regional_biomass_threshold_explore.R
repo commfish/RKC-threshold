@@ -96,7 +96,7 @@ fig1
 dev.off()
 
 
-### Figures with function attempts
+### Figures with function attempts -----
 f.regional.fig(biomass_17, region = NULL, y1 = 646753.4, y2 = 907430.5, closures =NULL)
 
 biomass_17 %>%
