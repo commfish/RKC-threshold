@@ -45,6 +45,7 @@ reg_biomass %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(legal))
 reg_biomass %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(mature))
 
 
+
 ### 2017 model output average summary -----
 biomass_17 %>% 
   select(Year, legal, mature) %>% 
@@ -80,13 +81,44 @@ fig1<- ggplot(biomass_17a_long, aes(Year, pounds, group = type))+
   geom_hline(yintercept = 646753.4, color = "grey1")+
   geom_hline(yintercept = 907430.5, color = "grey1", linetype = "dashed") 
   
-biomass_17a %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(reg_legal))
-biomass_17a %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(reg_mature))
+
+f.regional.table(biomass_17, startyr = 1993, endyr = 2007) # produces LT baseline averages
+
+f.regional.table(biomass_17, region = Pybus, startyr = 1993, endyr = 2007) 
+
+
+#biomass_17a %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(reg_legal))
+#biomass_17a %>% filter(Year >= 1993 & Year <= 2007) %>% summarise(mean(reg_mature))
 
 # save plot 
 png('./results/regional_2017.png', res= 300, width = 7.5, height =4.0, units = "in")
 fig1
 dev.off()
+
+
+### Figures with function attempts
+f.regional.fig(biomass_17, region = NULL, y1 = 646753.4, y2 = 907430.5, closures =NULL)
+
+biomass_17 %>%
+  #filter(Location == y) %>%
+  group_by(Year) %>% 
+  summarise(legal = sum(legal), mature = sum(mature)) %>% 
+  gather(type, pounds, legal:mature, factor_key = TRUE) %>%
+  ggplot(aes(Year, pounds, group = type)) +
+  geom_point(aes(color = type, shape = type), size =3) +
+  geom_line(aes(color = type, group = type)) +
+  scale_colour_manual(name = "", values = c("grey1", "grey1")) +
+  scale_shape_manual(name = "", values = c(16, 1)) +
+  ylim(0,1500000) + ggtitle("Survey areas 2017 Model") +
+  ylab("Biomass (lbs)") + xlab("") +
+  theme(plot.title = element_text(hjust =0.5)) +
+  scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
+  theme(legend.position = c(0.8,0.7)) +
+  geom_hline(yintercept = 646753.4, color = "grey1") +
+  geom_hline(yintercept = 907430.5, color = "grey1", lty = 4) %>%
+  ggsave("results/regional_biomass.png", device="png",
+         dpi=300, height=5.0, width=7.55, units="in")
+
 
 ### 2017 output long term baseline average -------------
 
@@ -263,3 +295,6 @@ ggplot(biomass_17_area_long, aes(Year, pounds, group = type))+ facet_wrap(~ Loca
 png('./results/regional_50_LTbase.png', res= 300, width = 7.5, height = 5.0, units = "in")
 fig
 dev.off()
+
+
+
