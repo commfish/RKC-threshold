@@ -15,9 +15,9 @@ theme_set(theme_bw(base_size=12,base_family='Times New Roman')+
 f.regional.fig <- function(x, region=NULL, startyr, endyr, closures = NULL){
   # x = data
   # region = the region of interest
-  # y1 = yintercept 1
-  # y2 = yintercept 2
-  # closures = regional data with closures / openings (set to 1 if desired)
+  # startyr = starting year to calculate long term average 
+  # endyr = end year to calculate long term average
+  # closures = file with open or closed and year 
   
   if(missing(region) && missing(closures)){
     x %>% 
