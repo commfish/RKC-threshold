@@ -87,7 +87,7 @@ fig1<- ggplot(biomass_17a_long, aes(Year, pounds, group = type))+
   geom_hline(yintercept = 907430.5, color = "grey1", linetype = "dashed") 
   
 
-f.regional.table(biomass_17, startyr = 1993, endyr = 2007) # produces LT baseline averages
+out <- f.regional.table(biomass_17, startyr = 1993, endyr = 2007) # produces LT baseline averages
 
 f.regional.table(biomass_17, region = 'Pybus' , startyr = 1993, endyr = 2007) 
 
@@ -102,7 +102,7 @@ dev.off()
 
 
 ### Figures with function attempts -----
-f.regional.fig(biomass_17, region = NULL, y1 = 646753.4, y2 = 907430.5, closures =NULL)
+f.regional.fig(biomass_17, region = NULL, startyr = 1993, endyr = 2007, closures =NULL)
 
 biomass_17 %>%
   #filter(Location == y) %>%
@@ -119,8 +119,8 @@ biomass_17 %>%
   theme(plot.title = element_text(hjust =0.5)) +
   scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
   theme(legend.position = c(0.8,0.7)) +
-  geom_hline(yintercept = 646753.4, color = "grey1") +
-  geom_hline(yintercept = 907430.5, color = "grey1", lty = 4) 
+  geom_hline(yintercept = out$legal, color = "grey1") +
+  geom_hline(yintercept = out$mature, color = "grey1", lty = 4) 
   ggsave("results/regional_biomass.png", plot = last_plot() , device="png",
          dpi=300, height=5.0, width=7.55, units="in")
 
