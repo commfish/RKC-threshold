@@ -31,7 +31,7 @@ f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017, closu
 f.regional.table(biomass_17, startyr = 1993, endyr = 2017)
 
 f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, currentyr = 2017)
-
+f.threshold.fig(biomass_17, startyr = 1993, endyr = 2017, currentyr = 2017, percent = 0.50)
 # regional, baseline 93- present, closures ------------
 f.regional.fig(biomass_17, startyr = 1993, endyr = 2017, currentyr = 2017, closures = fishery.status)
 
