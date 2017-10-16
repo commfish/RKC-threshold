@@ -40,6 +40,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
+      scale_y_continuous(labels = comma) +
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1", lty = 4) +
       geom_hline(yintercept = out$mature, color = "grey1") 
@@ -68,6 +69,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       ylab("Biomass (lbs)")+ xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
+      scale_y_continuous(labels = comma) +
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1", lty = 4) +
       geom_hline(yintercept = out$mature, color = "grey1") 
@@ -92,6 +94,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
+      scale_y_continuous(labels = comma) +
       theme(legend.position = c(0.8,0.7)) +
       geom_hline(yintercept = out$legal, color = "grey1", lty = 4) +
       geom_hline(yintercept = out$mature, color = "grey1") 
@@ -129,6 +132,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
+      scale_y_continuous(labels = comma) +
       theme(legend.position = c(0.8,0.7)) +
       #geom_hline(yintercept = out$legal, color = "grey1") +
       geom_hline(yintercept = out$mature, color = "grey1") +
@@ -155,6 +159,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
       ylab("Biomass (lbs)") + xlab("") +
       theme(plot.title = element_text(hjust =0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by = 5)) +
+      scale_y_continuous(labels = comma) +
       theme(legend.position = c(0.8,0.7)) +
       #geom_hline(yintercept = out$legal, color = "grey1") +
       geom_hline(yintercept = out$mature, color = "grey1") +
