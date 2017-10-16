@@ -41,5 +41,24 @@ f.regional.table(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
 f.regional.thresholds(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007)
 
 f.regional.fig(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2007, currentyr = 2017)
-
+f.regional.fig(biomass_17, region = 'Pybus', startyr = 1993, endyr = 2017, currentyr = 2017)
 f.threshold.fig(biomass_17, region = 'Pybus', 1993, 2007, 2017, 0.50)
+f.threshold.fig(biomass_17, region = 'Pybus', 1993, 2017, 2017, 0.50)
+
+## Gambier ---------------
+f.regional.table(biomass_17, region = 'Gambier', startyr = 1993, endyr = 2007)
+f.regional.thresholds(biomass_17, region = 'Gambier', startyr = 1993, endyr = 2007)
+
+f.regional.fig(biomass_17, region = 'Gambier', startyr = 1993, endyr = 2007, currentyr = 2017)
+f.regional.fig(biomass_17, region = 'Gambier', startyr = 1993, endyr = 2017, currentyr = 2017)
+f.threshold.fig(biomass_17, region = 'Gambier', 1993, 2007, 2017, 0.50)
+f.threshold.fig(biomass_17, region = 'Gambier', 1993, 2017, 2017, 0.50)
+
+## Seymour ---------------
+f.regional.table(biomass_17, region = 'Seymour', startyr = 1993, endyr = 2007)
+f.regional.thresholds(biomass_17, region = 'Seymour', startyr = 1993, endyr = 2007)
+
+f.regional.fig(biomass_17, region = 'Seymour', startyr = 1993, endyr = 2007, currentyr = 2017)
+f.regional.fig(biomass_17, region = 'Seymour', startyr = 1993, endyr = 2017, currentyr = 2017)
+f.threshold.fig(biomass_17, region = 'Seymour', 1993, 2007, 2017, 0.50)
+f.threshold.fig(biomass_17, region = 'Seymour', 1993, 2017, 2017, 0.50)
