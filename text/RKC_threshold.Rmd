@@ -62,9 +62,31 @@ This figure is similar to that reported in the red king crab assessment memo.  S
 ![](../results/regional_open_closed2007.png)
 
 
+## Individual survey areas
+Each survey area is represented with two figures, showing the long term average of mature male biomass for both the 93-07 time period and 93-17 time period. The solid black line represents the average mature male biomass and the dashed red line represents a 50% threshold of this average. 
 
 ### Pybus Bay
+### Figure 5: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+![](../results/thresholdPybus20070.5.png)
 
+### Figure 6: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+![](../results/thresholdPybus20170.5.png)
+
+
+
+### Gambier Bay
+### Figure 5: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+![](../results/thresholdPybus20070.5.png)
+
+### Figure 6: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+![](../results/thresholdPybus20170.5.png)
+
+
+### Seymour Canal
+### Lynn Canal
+### Juneau
+### Peril Strait
+### Excursion Inlet
 
 
 
