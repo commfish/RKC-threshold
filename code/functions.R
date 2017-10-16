@@ -34,7 +34,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       ggplot(aes(Year, pounds, group = type)) +
       geom_point(aes(color = type, shape = type), size =3) +
       geom_line(aes(color = type, group = type)) +
-      scale_colour_manual(name = "", values = c("grey1", "grey1")) +
+      scale_colour_manual(name = "", values = c("grey40", "grey1")) +
       scale_shape_manual(name = "", values = c(1, 16)) +
       ylim(0,1500000) + ggtitle(paste0("Survey areas ", currentyr, " Model, ", startyr, "-", endyr, " average" )) +
       ylab("Biomass (lbs)") + xlab("") +
@@ -62,7 +62,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       geom_point(aes(color = fishery.status, shape = type), size =3) +
       geom_line(aes(color = type, group = type)) +
       scale_colour_manual(name = "", 
-                          values = c("grey1", "gray55", "grey1", "red")) +
+                          values = c("grey40", "gray55", "grey1", "red")) +
       scale_shape_manual(name = "", values = c(1, 16, 20)) +
       ylim(0,1500000) + ggtitle(paste0("Survey areas ", currentyr, " Model, ", startyr, "-", endyr, " average" )) +
       ylab("Biomass (lbs)")+ xlab("") +
@@ -86,7 +86,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       ggplot(aes(Year, pounds, group = type)) +
       geom_point(aes(color = type, shape = type), size =3) +
       geom_line(aes(color = type, group = type)) +
-      scale_colour_manual(name = "", values = c("grey1", "grey1")) +
+      scale_colour_manual(name = "", values = c("grey40", "grey1")) +
       scale_shape_manual(name = "", values = c(1, 16)) +
       ggtitle(paste0( currentyr, " Model ", y, " survey area, ", startyr, "-", endyr, " average")) +
       ylab("Biomass (lbs)") + xlab("") +
