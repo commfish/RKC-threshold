@@ -45,19 +45,19 @@ Need to attempt to establish a B0, and determine the compensatory capacity of th
 ## Regional biomass visualizations 
 Includes the biomass estimates of all the current survey areas.  These estimates are NOT expanded to include the non-surveyed areas.  
 
-### Figure 1: Regional biomass of surveyed areas from 2017 models, using 93-07 baseline
+#### Figure 1: Regional biomass of surveyed areas from 2017 models, using 93-07 baseline
 This figure is similar to that reported in the red king crab assessment memo.  Showing biomass estimates of legal and mature male crab. 
 
 ![](../results/regional_biomass2007.png)
 
 
-### Figure 2: Regional biomass of surveyed areas from 2017 models, with 93 to 2007 average and 50% threshold. 
+#### Figure 2: Regional biomass of surveyed areas from 2017 models, with 93 to 2007 average and 50% threshold. 
 ![](../results/regional_biomass_threshold2007.png)
 
-### Figure 3: Regional biomass of surveyed areas from 2017 models, with 93 to current year average and 50% threshold. 
+#### Figure 3: Regional biomass of surveyed areas from 2017 models, with 93 to current year average and 50% threshold. 
 ![](../results/regional_biomass_threshold2017.png)
 
-### Figure 4: Regional biomass of surveyed areas from 2017 models (93-07 baseline) showing seasons open to commercial harvest
+#### Figure 4: Regional biomass of surveyed areas from 2017 models (93-07 baseline) showing seasons open to commercial harvest
 ![](../results/regional_open_closed2007.png)
 
 
@@ -66,58 +66,58 @@ Each survey area is represented with two figures, showing the long term average 
 
 
 ### Pybus Bay
-### Figure 5: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 5: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdPybus20070.5.png)
 
-### Figure 6: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 6: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdPybus20170.5.png)
 
 
 
 ### Gambier Bay
-### Figure 7: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 7: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdGambier20070.5.png)
 
-### Figure 8: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 8: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdGambier20170.5.png)
 
 
 ### Seymour Canal
-### Figure 9: Seymour Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 9: Seymour Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdSeymour20070.5.png)
 
-### Figure 10: Seymour Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 10: Seymour Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdSeymour20170.5.png)
 
 ### Lynn Canal
-### Figure 11: Lynn Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 11: Lynn Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdLynn Canal20070.5.png)
 
-### Figure 12: Lynn Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 12: Lynn Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdLynn Canal20170.5.png)
 
 
 ### Juneau
-### Figure 13: Juneau bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 13: Juneau bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdJuneau20070.5.png)
 
-### Figure 14: Juneau bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 14: Juneau bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdJuneau20170.5.png)
 
 
 ### Peril Strait
-### Figure 15: Peril Strait bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 15: Peril Strait bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdPeril20070.5.png)
 
-### Figure 16: Peril Strait bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 16: Peril Strait bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdPeril20170.5.png)
 
 ### Excursion Inlet
 
-### Figure 17: Excursion Inlet bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+#### Figure 17: Excursion Inlet bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdExcursion20070.5.png)
 
-### Figure 18: Excursion Inlet bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+#### Figure 18: Excursion Inlet bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdExcursion20170.5.png)
 
 
