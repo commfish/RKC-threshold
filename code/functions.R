@@ -197,7 +197,8 @@ f.regional.thresholds <- function(x, region=NULL, startyr = NULL, endyr = NULL){
     mutate(p50mat = 0.5 * mature, 
            p60mat = 0.6 * mature, 
            p70mat = 0.7 * mature, 
-           p80mat = 0.8 * mature )
+           p80mat = 0.8 * mature, 
+           end = endyr)
   } else {
     y = region
     x %>% 
@@ -207,6 +208,7 @@ f.regional.thresholds <- function(x, region=NULL, startyr = NULL, endyr = NULL){
       mutate(p50mat = 0.5 * mature, 
              p60mat = 0.6 * mature, 
              p70mat = 0.7 * mature, 
-             p80mat = 0.8 * mature )
+             p80mat = 0.8 * mature, 
+             end = endyr)
   }
 }
