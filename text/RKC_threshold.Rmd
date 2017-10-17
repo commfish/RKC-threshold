@@ -8,6 +8,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+library(knitr)
 library(tidyverse)
 library(extrafont)
 library(grid)
@@ -42,6 +43,26 @@ This is hard to use due to the sparse nature of the fishery.  There has been a f
 Could use a sliding scale to reduce fishing mortality as stock declines.
 Need to attempt to establish a B0, and determine the compensatory capacity of the stock. The feasibility of this will be addressed in the future. 
     
+## Results: long term averages of mature male biomass
+
+#### Table 1: Average biomass values for 1993 - 2007
+
+```{r table1, warning = FALSE}
+t2007 <- read.csv("../results/2007averages.csv")
+kable(t2007, digits = 0)
+```
+
+** p50mat = 50% of the mature male biomass averages; survey_area NA is the regional estimate
+
+#### Table 2: Average biomass values for 1993 - 2017
+
+```{r table2, warning = FALSE}
+t2017 <- read.csv("../results/2017averages.csv")
+kable(t2017, digits = 0)
+```
+
+** p50mat = 50% of the mature male biomass averages; survey_area NA is the regional estimate
+
 
 
 ## Regional biomass visualizations 
