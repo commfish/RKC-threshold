@@ -46,7 +46,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       geom_hline(yintercept = out$legal, color = "grey1", lty = 4) +
       geom_hline(yintercept = out$mature, color = "grey1") 
       ggsave(paste0("results/regional_biomass", endyr, ".png"), plot = last_plot(), device="png",
-             dpi=300, height=5.0, width=7.55, units="in")
+             dpi=300, height=4.0, width=7.55, units="in")
   } else if(missing(region) && !missing(closures)){ 
     x %>% 
       left_join(closures) -> x
@@ -75,7 +75,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       geom_hline(yintercept = out$legal, color = "grey1", lty = 4) +
       geom_hline(yintercept = out$mature, color = "grey1") 
       ggsave(paste0("results/regional_open_closed", endyr, ".png"), plot = last_plot(), device="png",
-             dpi=300, height=5.0, width=7.55, units="in")
+             dpi=300, height=4.0, width=7.55, units="in")
   } else{
     
     y = region
@@ -100,7 +100,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
       geom_hline(yintercept = out$legal, color = "grey1", lty = 4) +
       geom_hline(yintercept = out$mature, color = "grey1") 
       ggsave(paste0("results/", y, endyr, ".png"), plot = last_plot(), device="png",
-             dpi=300, height=5.0, width=7.55, units="in")
+             dpi=300, height=4.0, width=7.55, units="in")
   }
 }
 
