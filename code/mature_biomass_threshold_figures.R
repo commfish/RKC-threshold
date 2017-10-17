@@ -35,12 +35,13 @@ f.threshold.fig(biomass_17, startyr, endyr, currentyr)
 f.regional.fig(biomass_17, startyr, endyr, currentyr, closures = fishery.status)
 
 ### regional with average baseline from 93 to present ---------
+# endyr here needs to be 2017 to get an average from 1993 to present.
 f.regional.table(biomass_17, startyr, endyr)
 
-f.regional.fig(biomass_17, startyr, endyr, currentyr)
-f.threshold.fig(biomass_17, startyr, endyr, currentyr)
+f.regional.fig(biomass_17, startyr, endyr = 2017, currentyr)
+f.threshold.fig(biomass_17, startyr, endyr = 2017, currentyr)
 # regional, baseline 93- present, closures ------------
-f.regional.fig(biomass_17, startyr, endyr, currentyr, closures = fishery.status)
+f.regional.fig(biomass_17, startyr, endyr = 2017, currentyr, closures = fishery.status)
 
 ### area figures  ----------------
 ## Pybus ---------------
@@ -48,24 +49,24 @@ f.regional.table(biomass_17, region = 'Pybus', startyr, endyr)
 f.regional.thresholds(biomass_17, region = 'Pybus', startyr, endyr)
 
 f.regional.fig(biomass_17, region = 'Pybus', startyr, endyr, currentyr)
-f.regional.fig(biomass_17, region = 'Pybus', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Pybus', startyr, endyr = 2017, currentyr)
 f.threshold.fig(biomass_17, region = 'Pybus', startyr, endyr, currentyr)
-f.threshold.fig(biomass_17, region = 'Pybus', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Pybus', startyr, endyr = 2017, currentyr)
 
 ## Gambier ---------------
 f.regional.table(biomass_17, region = 'Gambier', startyr, endyr)
 f.regional.thresholds(biomass_17, region = 'Gambier', startyr, endyr)
 
 f.regional.fig(biomass_17, region = 'Gambier', startyr, endyr, currentyr)
-f.regional.fig(biomass_17, region = 'Gambier', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Gambier', startyr, endyr = 2017, currentyr)
 f.threshold.fig(biomass_17, region = 'Gambier', startyr, endyr, currentyr)
-f.threshold.fig(biomass_17, region = 'Gambier', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Gambier', startyr, endyr = 2017, currentyr)
 
 ## Seymour ---------------
 f.regional.table(biomass_17, region = 'Seymour', startyr, endyr)
 f.regional.thresholds(biomass_17, region = 'Seymour', startyr, endyr)
 
 f.regional.fig(biomass_17, region = 'Seymour', startyr, endyr, currentyr)
-f.regional.fig(biomass_17, region = 'Seymour', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Seymour', startyr, endyr = 2017, currentyr)
 f.threshold.fig(biomass_17, region = 'Seymour', startyr, endyr, currentyr)
-f.threshold.fig(biomass_17, region = 'Seymour', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Seymour', startyr, endyr = 2017, currentyr)
