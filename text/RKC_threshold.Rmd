@@ -1,7 +1,7 @@
 ---
-title: "RKC threshold"
+title: "RKC threshold exploration"
 author: "Katie Palof"
-date: "October 9, 2017"
+date: "October 17, 2017"
 output:
   word_document: default
   html_document: default
