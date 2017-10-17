@@ -20,10 +20,10 @@ knitr::opts_chunk$set(echo = FALSE, message = F, warning = F)
 
 ## Objective
 Develop methods to establish a biological threshold for Southeast Alaska red king crab management.
-Ideally this threshold would be used to determine a harvest control rule for more sustainable management.
+Ideally, this threshold would be used to determine a harvest control rule for more consistent and sustainable management.
 
 ## Background
-Currently the red king crab fishery in Southeast Alaska is managed, in regulation, using a clause that opens the fishery as long as there is a 200,000 pound surplus for harvest.  However, there is no guidance given as to how this surplus should or can be determined or guidance on the level that the population should be sustained. 
+Currently, the red king crab fishery in Southeast Alaska is managed, in regulation, using a clause that opens the fishery as long as there is a 200,000 pound surplus for harvest.  However, there is no guidance given as to how this surplus should or can be determined or guidance on the level that the population should be sustained. 
 Data available for use in this analysis is survey CPUE of all size and sex classes, fishery CPUE (although the fishery has only opened once in the last decade), and mature male biomass estimated using a catch-survey analysis model (CSA) from survey CPUE and harvest.  
 Establishing biological reference points for this fishery would aid in more effective management. 
 
@@ -31,14 +31,14 @@ Establishing biological reference points for this fishery would aid in more effe
 ## Methods
 
 #### Long term average of biomass estimates
-Currently, we use a long-term baseline value to compare CPUEs from the survey for an indication of how the current years CPUE relates to the long term average.  The same long-term baseline can be applied to the biomass estimate for each survey area and the regional overall.  It is common in other crab fisheries around the state to have a threshold of 50% of the long term average of the mature male biomass.  Typically in other fisheries at this threshold no harvest would be allowed.  For this exercise figures will be presented below for the regional and each survey area showing both the long-term averages of mature male biomass and 50% of this value.  Long term averages were calculated in two way; first, using the current baseline years, 1993-2007, and second, using 1993-2017 (current year).  As previous documents and memo have stated 1993 was the first year that the survey was standardized similar to the current methods, prior to 1993 the survey methods and results are of lower quality and therefore the biomass estiamtes are more variable. 
+Currently, we use a long-term baseline value to compare CPUEs from the survey for an indication of how the current years CPUE relates to the long term average.  The same long-term baseline can be applied to the biomass estimate for each survey area and the regional overall.  It is common in other crab fisheries around the state to have a threshold of 50% of the long term average of the mature male biomass.  Typically in other fisheries at this threshold no harvest would be allowed.  For this exercise figures will be presented below for the regional and each survey area showing both the long-term averages of mature male biomass and 50% of this value.  Long term averages were calculated in two way; first, using the current baseline years, 1993-2007, and second, using 1993-2017 (current year).  As previous documents and memos on baseline years have stated, 1993 was the first year that the survey was standardized similar to the current methods, prior to 1993 the survey methods and results are of lower quality and therefore, the biomass estimates are more variable. 
 
 #### Average yield
 This is hard to use due to the sparse nature of the fishery.  There has been a fishery about once a decade which makes it hard to use yield or harvest as an indicator.
 
 #### Biological reference points - biomass-based
 Could use a sliding scale to reduce fishing mortality as stock declines.
-Need to attempt to establish a B0, and determine the compensatory capacity of the stock.
+Need to attempt to establish a B0, and determine the compensatory capacity of the stock. The feasibility of this will be addressed in the future. 
     
 
 
