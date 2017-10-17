@@ -52,10 +52,10 @@ This figure is similar to that reported in the red king crab assessment memo.  S
 
 
 ### Figure 2: Regional biomass of surveyed areas from 2017 models, with 93 to 2007 average and 50% threshold. 
-![](../results/regional_bioamss_threshold2007.png)
+![](../results/regional_biomass_threshold2007.png)
 
 ### Figure 3: Regional biomass of surveyed areas from 2017 models, with 93 to current year average and 50% threshold. 
-![](../results/regional_bioamss_threshold2017.png)
+![](../results/regional_biomass_threshold2017.png)
 
 ### Figure 4: Regional biomass of surveyed areas from 2017 models (93-07 baseline) showing seasons open to commercial harvest
 ![](../results/regional_open_closed2007.png)
