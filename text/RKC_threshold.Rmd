@@ -16,7 +16,6 @@ theme_set(theme_bw(base_size=12,base_family='Times New Roman')
           +theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()))
 knitr::opts_chunk$set(echo = FALSE, message = F, warning = F)
 
-source("./code/functions.R"))
 ```
 
 ## Objective
@@ -49,7 +48,7 @@ Includes the biomass estimates of all the current survey areas.  These estimates
 ### Figure 1: Regional biomass of surveyed areas from 2017 models, using 93-07 baseline
 This figure is similar to that reported in the red king crab assessment memo.  Showing biomass estimates of legal and mature male crab. 
 
-![](../results/regional_bioamss2007.png)
+![](../results/regional_biomass2007.png)
 
 
 ### Figure 2: Regional biomass of surveyed areas from 2017 models, with 93 to 2007 average and 50% threshold. 
