@@ -2,7 +2,9 @@
 title: "RKC threshold"
 author: "Katie Palof"
 date: "October 9, 2017"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
