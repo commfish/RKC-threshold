@@ -135,6 +135,7 @@ t1 %>%
   bind_rows(e1) %>% 
   select(legal, mature, p50mat, end, survey_area) -> t2007
 
+write.csv(t2007, './results/2007averages.csv', row.names = FALSE)
 
 t2 %>% 
   bind_rows(p2) %>% 
@@ -144,3 +145,5 @@ t2 %>%
   bind_rows(ps2) %>% 
   bind_rows(e2) %>% 
   select(legal, mature, p50mat, end, survey_area) -> t2017
+
+write.csv(t2017, './results/2017averages.csv', row.names = FALSE)
