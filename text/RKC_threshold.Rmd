@@ -75,21 +75,28 @@ Each survey area is represented with two figures, showing the long term average 
 
 
 ### Gambier Bay
-### Figure 5: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+### Figure 7: Pybus Bay bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdGambier20070.5.png)
 
-### Figure 6: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+### Figure 8: Pybus Bay bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdGambier20170.5.png)
 
 
 ### Seymour Canal
-### Figure 5: Seymour Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+### Figure 9: Seymour Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
 ![](../results/thresholdSeymour20070.5.png)
 
-### Figure 6: Seymour Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+### Figure 10: Seymour Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
 ![](../results/thresholdSeymour20170.5.png)
 
 ### Lynn Canal
+### Figure 11: Seymour Canal bioamss estimates from 2017 models, with 1993 to 2007 average and 50% threshold. 
+![](../results/thresholdSeymour20070.5.png)
+
+### Figure 12: Seymour Canal bioamss estimates from 2017 models, with 93 to current year average and 50% threshold.
+![](../results/thresholdSeymour20170.5.png)
+
+
 ### Juneau
 ### Peril Strait
 ### Excursion Inlet
