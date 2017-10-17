@@ -139,7 +139,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent =
       geom_hline(yintercept = out$mature, color = "grey1") +
       geom_hline(yintercept = out$p_mat, color = "red", lty = 4)
     ggsave(paste0("results/regional_biomass_threshold", endyr, ".png"), plot = last_plot(), device="png",
-           dpi=300, height=5.0, width=7.55, units="in")
+           dpi=300, height=4.0, width=7.55, units="in")
   } else{
     
     y = region
@@ -166,7 +166,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent =
       geom_hline(yintercept = out$mature, color = "grey1") +
       geom_hline(yintercept = out$p_mat, color = "red", lty = 4)
     ggsave(paste0("results/threshold", y, endyr, percent, ".png"), plot = last_plot(), device="png",
-           dpi=300, height=5.0, width=7.55, units="in")
+           dpi=300, height=4.0, width=7.55, units="in")
   }
 }
 
