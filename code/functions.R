@@ -104,7 +104,7 @@ f.regional.fig <- function(x, region=NULL, startyr, endyr, currentyr, closures =
   }
 }
 
-f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
+f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent = 0.5){
   # x = data
   # region = the region of interest
   # startyr = starting year to calculate long term average 
@@ -131,7 +131,7 @@ f.threshold.fig <- function(x, region=NULL, startyr, endyr, currentyr, percent){
       scale_shape_manual(name = "", values = c(1, 16)) +
       ylim(0,1500000) + ggtitle(paste0("Survey areas ", currentyr ," model, ", percent, " threshold, ", startyr, "-", endyr, " average" )) +
       ylab("Biomass (lbs)") + xlab("") +
-      theme(plot.title = element_text(hjust =0.5)) +
+      theme(plot.title = element_text(hjust=0.5)) +
       scale_x_continuous(breaks = seq(1979, 2017, by =5)) +
       scale_y_continuous(labels = comma) +
       theme(legend.position = c(0.8,0.7)) +
