@@ -70,3 +70,40 @@ f.regional.fig(biomass_17, region = 'Seymour', startyr, endyr, currentyr)
 f.regional.fig(biomass_17, region = 'Seymour', startyr, endyr = 2017, currentyr)
 f.threshold.fig(biomass_17, region = 'Seymour', startyr, endyr, currentyr)
 f.threshold.fig(biomass_17, region = 'Seymour', startyr, endyr = 2017, currentyr)
+
+## Lynn Canal ---------------
+f.regional.table(biomass_17, region = 'Lynn Canal', startyr, endyr)
+f.regional.thresholds(biomass_17, region = 'Lynn Canal', startyr, endyr)
+
+f.regional.fig(biomass_17, region = 'Lynn Canal', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Lynn Canal', startyr, endyr = 2017, currentyr)
+f.threshold.fig(biomass_17, region = 'Lynn Canal', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Lynn Canal', startyr, endyr = 2017, currentyr)
+
+## Juneau ---------------
+f.regional.table(biomass_17, region = 'Juneau', startyr, endyr)
+f.regional.thresholds(biomass_17, region = 'Juneau', startyr, endyr)
+
+f.regional.fig(biomass_17, region = 'Juneau', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Juneau', startyr, endyr = 2017, currentyr)
+f.threshold.fig(biomass_17, region = 'Juneau', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Juneau', startyr, endyr = 2017, currentyr)
+
+## Peril ---------------
+f.regional.table(biomass_17, region = 'Peril', startyr, endyr)
+f.regional.thresholds(biomass_17, region = 'Peril', startyr, endyr)
+
+f.regional.fig(biomass_17, region = 'Peril', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Peril', startyr, endyr = 2017, currentyr)
+f.threshold.fig(biomass_17, region = 'Peril', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Peril', startyr, endyr = 2017, currentyr)
+
+
+## Excursion ---------------
+f.regional.table(biomass_17, region = 'Excursion', startyr, endyr)
+f.regional.thresholds(biomass_17, region = 'Excursion', startyr, endyr)
+
+f.regional.fig(biomass_17, region = 'Excursion', startyr, endyr, currentyr)
+f.regional.fig(biomass_17, region = 'Excursion', startyr, endyr = 2017, currentyr)
+f.threshold.fig(biomass_17, region = 'Excursion', startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, region = 'Excursion', startyr, endyr = 2017, currentyr)
