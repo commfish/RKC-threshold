@@ -28,12 +28,12 @@ percent = 0.50
 f.regional.table(biomass_17, startyr = 1993, endyr = 2007)
 t1 <- f.regional.thresholds(biomass_17, startyr = 1993, endyr = 2007)
 
-f.regional.fig(biomass_17, startyr, endyr, currentyr)
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017)
 
-f.threshold.fig(biomass_17, startyr, endyr, currentyr)
+f.threshold.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017)
 
 # regional, baseline 93-07, closures ------------
-f.regional.fig(biomass_17, startyr, endyr, currentyr, closures = fishery.status)
+f.regional.fig(biomass_17, startyr = 1993, endyr = 2007, currentyr = 2017, closures = fishery.status)
 
 ### regional with average baseline from 93 to present ---------
 # endyr here needs to be 2017 to get an average from 1993 to present.
@@ -41,7 +41,7 @@ t2 <- f.regional.thresholds(biomass_17, startyr = 1993, endyr = 2017)
 
 f.regional.table(biomass_17, startyr = 1993, endyr = 2017)
 f.regional.fig(biomass_17, startyr, endyr = 2017, currentyr)
-f.threshold.fig(biomass_17, startyr, endyr = 2017, currentyr)
+f.threshold.fig(biomass_17, startyr = 1993, endyr = 2017, currentyr = 2017)
 # regional, baseline 93- present, closures ------------
 f.regional.fig(biomass_17, startyr, endyr = 2017, currentyr, closures = fishery.status)
 
