@@ -127,13 +127,13 @@ f.threshold.fig(biomass_17, region = 'Excursion', startyr, endyr = 2017, current
 # table summary of averages and thresholds ---------
 
 t1 %>% 
-  bind_rows(p1, s1, l1, j1, ps1, e1) %>% 
+  bind_rows(p1, g1, s1, l1, j1, ps1, e1) %>% 
   select(legal, mature, p50mat, end, survey_area) -> t2007
 
 write.csv(t2007, './results/2007averages.csv', row.names = FALSE)
 
 t2 %>% 
-  bind_rows(p2, s2, l2, j2, ps2, e2) %>% 
+  bind_rows(p2, g2, s2, l2, j2, ps2, e2) %>% 
   select(legal, mature, p50mat, end, survey_area) -> t2017
 
 write.csv(t2017, './results/2017averages.csv', row.names = FALSE)
